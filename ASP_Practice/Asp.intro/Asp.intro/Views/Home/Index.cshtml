@@ -1,0 +1,37 @@
+﻿@using Asp.intro.Models
+@using Asp.intro.Models.ViewModels.Student;
+
+
+@* 
+@{
+    string name = "Haci";
+    List<string> students = new List<string> { "Haci", "Ali", "Elnur" };
+}
+<h1 style="color:magenta">@name</h1>
+
+
+<ul>
+    @foreach (var item in students)
+    {
+        <li>@item</li>
+    }
+</ul>
+
+ *@
+
+
+
+ @model List<StudentVM>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@(item.FullName)</li>
+    }
+</ul>
+
+
+
+
+
+
